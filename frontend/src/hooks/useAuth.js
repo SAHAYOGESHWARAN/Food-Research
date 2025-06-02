@@ -1,1 +1,0 @@
-// Hook for authentication logic
