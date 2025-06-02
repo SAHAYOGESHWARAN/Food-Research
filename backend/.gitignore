@@ -1,0 +1,29 @@
+# Node modules and environment
+node_modules/
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE and editor folders
+.vscode/
+.idea/
+
+# Build output
+/dist/
+/build/
+
+# Misc
+*.tgz
+coverage/
+
+# Optional: ignore test output
+/test-output/
