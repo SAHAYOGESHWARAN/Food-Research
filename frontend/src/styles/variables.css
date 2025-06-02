@@ -1,0 +1,28 @@
+:root {
+  --primary-color: #317EFB;
+  --secondary-color: #f5f6fa;
+  --accent-color: #ffb347;
+  --danger-color: #e74c3c;
+  --success-color: #27ae60;
+  --warning-color: #ff9800;
+  --info-color: #00bcd4;
+  --text-color: #222;
+  --text-light: #666;
+  --background: #fff;
+  --background-dark: #222;
+  --border-radius: 12px;
+  --border-radius-sm: 8px;
+  --border-radius-xs: 4px;
+  --transition: 0.2s all;
+  --box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --box-shadow-hover: 0 4px 16px rgba(49,126,251,0.12);
+  --font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 20px;
+  --input-bg: #f9f9f9;
+  --input-border: #ccc;
+  --input-focus: #317EFB22;
+  --scrollbar-bg: #f5f6fa;
+  --scrollbar-thumb: #e0e0e0;
+}

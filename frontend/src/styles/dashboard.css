@@ -1,0 +1,160 @@
+.dashboard-root {
+  display: flex;
+  min-height: 80vh;
+  background: var(--background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2.5em 1.5em;
+  gap: 2.5em;
+}
+.dashboard-sidenav {
+  min-width: 210px;
+  background: linear-gradient(160deg, #f7faff 60%, #e3e9f6 100%);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 16px rgba(49,126,251,0.08);
+  padding: 2em 1em 2em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+.dashboard-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+}
+.dashboard-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(49,126,251,0.10);
+  background: #fff;
+}
+.dashboard-brand {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  letter-spacing: 0.03em;
+  margin-top: 0.2em;
+}
+.dashboard-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.side-nav-btn {
+  background: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.08rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.2em;
+  text-align: left;
+  transition: background 0.18s, color 0.18s;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.side-nav-btn:hover, .side-nav-btn:focus-visible {
+  background: var(--primary-color);
+  color: #fff;
+}
+.side-nav-icon {
+  font-size: 1.25em;
+  margin-right: 0.5em;
+  display: inline-flex;
+  align-items: center;
+}
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1.5em 2em 1.5em 0;
+}
+.dashboard-welcome {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.2em;
+}
+.dashboard-desc {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1.5em;
+}
+.dashboard-chart-wrap {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 12px rgba(49,126,251,0.07);
+  padding: 2em 1.5em;
+  margin-bottom: 2em;
+}
+.dashboard-actions {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.dashboard-actions .custom-btn {
+  min-width: 170px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(49,126,251,0.07);
+  margin-bottom: 0.5em;
+}
+.dashboard-actions .custom-btn:hover {
+  background: linear-gradient(90deg, var(--accent-color) 60%, var(--primary-color) 100%);
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .dashboard-root {
+    flex-direction: column;
+    padding: 1.2em 0.5em;
+    gap: 1.2em;
+  }
+  .dashboard-main {
+    padding: 1em 0.2em 1em 0;
+  }
+  .dashboard-sidenav {
+    min-width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.2em;
+    padding: 1em 0.5em;
+  }
+  .dashboard-logo-wrap {
+    margin-bottom: 0;
+  }
+  .dashboard-nav {
+    flex-direction: row;
+    gap: 0.5em;
+  }
+}
+@media (max-width: 600px) {
+  .dashboard-root {
+    padding: 0.5em 0.1em;
+  }
+  .dashboard-main {
+    gap: 1em;
+    padding: 0.5em 0.1em 0.5em 0;
+  }
+  .dashboard-chart-wrap {
+    padding: 1em 0.3em;
+  }
+  .dashboard-welcome {
+    font-size: 1.2rem;
+  }
+  .dashboard-brand {
+    font-size: 1rem;
+  }
+  .dashboard-actions .custom-btn {
+    min-width: 120px;
+    font-size: 0.98rem;
+  }
+}

@@ -1,0 +1,43 @@
+.commitment-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.5em 1.2em;
+  margin-bottom: 1.5em;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: box-shadow 0.2s;
+}
+.commitment-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7em;
+}
+.commitment-card__company {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.commitment-card__body {
+  color: var(--text-color);
+}
+.commitment-card__description {
+  margin-bottom: 0.7em;
+}
+.commitment-card__dates {
+  font-size: 0.95em;
+  color: var(--text-light);
+  margin-bottom: 0.5em;
+}
+.commitment-card__products, .commitment-card__ingredients, .commitment-card__progress {
+  font-size: 0.97em;
+  margin-bottom: 0.4em;
+}
+.commitment-card__progress ul {
+  margin: 0.3em 0 0 1em;
+  padding: 0;
+}
+.commitment-card__progress li {
+  list-style: disc;
+}

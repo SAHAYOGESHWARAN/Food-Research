@@ -5,7 +5,7 @@ const { authenticate, authorize } = require('../middleware/authMiddleware');
 // Add validation middleware if needed
 
 router.post('/', authenticate, authorize('admin', 'contributor'), productController.createProduct);
-router.get('/', authenticate, productController.getProducts);
+router.get('/', productController.getProducts); // Public access
 router.get('/:id', authenticate, productController.getProductById);
 router.put('/:id', authenticate, authorize('admin', 'contributor'), productController.updateProduct);
 router.delete('/:id', authenticate, authorize('admin'), productController.deleteProduct);
