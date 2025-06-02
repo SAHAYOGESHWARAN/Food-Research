@@ -1,0 +1,1 @@
+// Context for theme management

@@ -1,0 +1,1 @@
+// Layout for authentication pages
