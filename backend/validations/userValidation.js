@@ -13,7 +13,7 @@ const userValidation = [
     .withMessage('Name must be a string'),
   body('role')
     .optional()
-    .isIn(['admin', 'contributor', 'subscriber'])
+    .isIn(['admin', 'contributor', 'user'])
     .withMessage('Invalid user role'),
   body('isActive')
     .optional()

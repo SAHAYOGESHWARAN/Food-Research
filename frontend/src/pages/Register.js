@@ -9,7 +9,7 @@ import authService from '../api/authService';
 const Register = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
-  const [form, setForm] = useState({ email: '', password: '', name: '', role: 'subscriber' });
+  const [form, setForm] = useState({ email: '', password: '', name: '', role: 'user' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -78,13 +78,20 @@ const Register = () => {
         >
           <option value="admin">Admin</option>
           <option value="contributor">Contributor</option>
-          <option value="subscriber">Subscriber</option>
         </select>
         
         <Button type="submit" disabled={loading}>
           {loading ? <Loader size={20} /> : 'Register'}
         </Button>
-        
+
+        {/* Google Login Button at the bottom */}
+        <div style={{ marginTop: '1.2em', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <Button type="button" className="google-btn" style={{ background: '#fff', color: '#317EFB', border: '1.5px solid #5eaefd', fontWeight: 600, width: '100%', maxWidth: 220 }}>
+            <img src={require('../assets/images/google.svg').default} alt="Google" style={{ width: 20, marginRight: 8, verticalAlign: 'middle' }} />
+            Sign up with Google
+          </Button>
+        </div>
+
         <div className="auth-form__footer">
           <span>Already have an account? <Link to="/login">Login</Link></span>
         </div>

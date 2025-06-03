@@ -53,8 +53,20 @@ const Login = () => {
           autoComplete="current-password"
         />
         <Button type="submit" disabled={loading}>{loading ? <Loader size={20} /> : 'Login'}</Button>
+
+        {/* Google Login Button at the bottom */}
+        <div style={{ marginTop: '1.2em', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <Button type="button" className="google-btn" style={{ background: '#fff', color: '#317EFB', border: '1.5px solid #5eaefd', fontWeight: 600, width: '100%', maxWidth: 220 }}>
+            <img src={require('../assets/images/google.svg').default} alt="Google" style={{ width: 20, marginRight: 8, verticalAlign: 'middle' }} />
+            Sign in with Google
+          </Button>
+        </div>
+
         <div className="auth-form__footer">
           <span>Don't have an account? <Link to="/register">Register</Link></span>
+          <span style={{ marginTop: 8, display: 'block' }}>
+            <Link to="/forgot-password" style={{ color: '#317EFB', fontWeight: 500 }}>Forgot password?</Link>
+          </span>
         </div>
       </form>
     </AuthLayout>
