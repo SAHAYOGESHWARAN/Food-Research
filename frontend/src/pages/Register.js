@@ -9,7 +9,7 @@ import authService from '../api/authService';
 const Register = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
-  const [form, setForm] = useState({ email: '', password: '', name: '' });
+  const [form, setForm] = useState({ email: '', password: '', name: '', role: 'subscriber' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -37,6 +37,7 @@ const Register = () => {
       <form className="auth-form" onSubmit={handleSubmit}>
         <h2>Register</h2>
         {error && <div className="error-message">{error}</div>}
+        
         <label htmlFor="name">Name</label>
         <input
           id="name"
@@ -46,6 +47,7 @@ const Register = () => {
           onChange={handleChange}
           required
         />
+        
         <label htmlFor="email">Email</label>
         <input
           id="email"
@@ -55,6 +57,7 @@ const Register = () => {
           onChange={handleChange}
           required
         />
+        
         <label htmlFor="password">Password</label>
         <input
           id="password"
@@ -64,7 +67,24 @@ const Register = () => {
           onChange={handleChange}
           required
         />
-        <Button type="submit" disabled={loading}>{loading ? <Loader size={20} /> : 'Register'}</Button>
+        
+        <label htmlFor="role">Role</label>
+        <select
+          id="role"
+          name="role"
+          value={form.role}
+          onChange={handleChange}
+          required
+        >
+          <option value="admin">Admin</option>
+          <option value="contributor">Contributor</option>
+          <option value="subscriber">Subscriber</option>
+        </select>
+        
+        <Button type="submit" disabled={loading}>
+          {loading ? <Loader size={20} /> : 'Register'}
+        </Button>
+        
         <div className="auth-form__footer">
           <span>Already have an account? <Link to="/login">Login</Link></span>
         </div>

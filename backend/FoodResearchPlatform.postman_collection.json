@@ -1,0 +1,204 @@
+{
+  "info": {
+    "_postman_id": "food-research-platform-collection",
+    "name": "Food Research Platform API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "User Registration",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"testuser@example.com\",\n  \"password\": \"password123\",\n  \"name\": \"Test User\",\n  \"role\": \"subscriber\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "users", "register"]
+        }
+      }
+    },
+    {
+      "name": "User Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"testuser@example.com\",\n  \"password\": \"password123\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "users", "login"]
+        }
+      }
+    },
+    {
+      "name": "Create Ingredient",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ingredientName\": \"Vitamin C\",\n  \"nutritionalContent\": \"Ascorbic acid, 100mg\",\n  \"safetyGuidelines\": \"Do not exceed 2000mg/day\",\n  \"studies\": [],\n  \"regulations\": [],\n  \"commitments\": []\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/ingredients",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "ingredients"]
+        }
+      }
+    },
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productName\": \"Immunity Booster\",\n  \"specifications\": \"Capsule, 30 count\",\n  \"nutritionalContent\": \"Vitamin C 100mg, Zinc 10mg\",\n  \"safetyGuidelines\": \"Not for children under 12\",\n  \"productCategory\": \"nutraceutical\",\n  \"ingredients\": [],\n  \"regulations\": [],\n  \"commitments\": []\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "products"]
+        }
+      }
+    },
+    {
+      "name": "Create Commitment",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"companyID\": \"{{user_id}}\",\n  \"commitmentType\": \"sustainability\",\n  \"description\": \"100% recyclable packaging by 2026\",\n  \"startDate\": \"2025-01-01\",\n  \"endDate\": \"2026-12-31\",\n  \"progressReports\": [],\n  \"productIDs\": [],\n  \"ingredientIDs\": []\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/commitments",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "commitments"]
+        }
+      }
+    },
+    {
+      "name": "Create Regulation",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"regulationName\": \"FDA Compliance\",\n  \"description\": \"Meets all FDA requirements\",\n  \"applicableRegions\": [\"USA\"],\n  \"complianceStandards\": \"21 CFR Part 111\",\n  \"effectiveDate\": \"2025-06-01\",\n  \"ingredientIDs\": [],\n  \"productIDs\": []\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/regulations",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "regulations"]
+        }
+      }
+    },
+    {
+      "name": "Create Subscription",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userID\": \"{{user_id}}\",\n  \"modules\": [\"marketInsights\", \"productData\"],\n  \"startDate\": \"2025-06-02\",\n  \"endDate\": \"2026-06-02\",\n  \"isActive\": true\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/subscriptions",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "subscriptions"]
+        }
+      }
+    },
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "products"]
+        }
+      }
+    },
+    {
+      "name": "Get All Users (admin only)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{admin_jwt_token}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "users"]
+        }
+      }
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "health"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "jwt_token", "value": "" },
+    { "key": "admin_jwt_token", "value": "" },
+    { "key": "user_id", "value": "" }
+  ]
+}

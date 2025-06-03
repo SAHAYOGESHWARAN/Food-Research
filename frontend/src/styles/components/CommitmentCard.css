@@ -1,43 +1,76 @@
 .commitment-card {
-  background: #fff;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  padding: 1.5em 1.2em;
-  margin-bottom: 1.5em;
-  max-width: 500px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e3e9f6 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(49,126,251,0.10), 0 1.5px 4px rgba(49,126,251,0.04);
+  padding: 2em 1.5em;
+  margin-bottom: 2em;
+  max-width: 540px;
   margin-left: auto;
   margin-right: auto;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.15s;
+  border: 1.5px solid #e0e7ef;
+  position: relative;
+  overflow: hidden;
+}
+.commitment-card:hover {
+  box-shadow: 0 8px 32px rgba(49,126,251,0.18), 0 2px 8px rgba(49,126,251,0.08);
+  transform: translateY(-2px) scale(1.015);
 }
 .commitment-card__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.7em;
+  margin-bottom: 1em;
 }
 .commitment-card__company {
-  color: var(--primary-color);
-  font-weight: 600;
+  color: #317efb;
+  font-weight: 700;
+  font-size: 1.08em;
+  letter-spacing: 0.5px;
 }
 .commitment-card__body {
-  color: var(--text-color);
+  color: #2b2d42;
+  font-size: 1.05em;
 }
 .commitment-card__description {
-  margin-bottom: 0.7em;
+  margin-bottom: 1em;
+  font-size: 1.08em;
+  font-weight: 500;
+  color: #406882;
 }
 .commitment-card__dates {
-  font-size: 0.95em;
-  color: var(--text-light);
-  margin-bottom: 0.5em;
+  font-size: 0.98em;
+  color: #7a869a;
+  margin-bottom: 0.7em;
+  display: flex;
+  gap: 1.5em;
 }
 .commitment-card__products, .commitment-card__ingredients, .commitment-card__progress {
-  font-size: 0.97em;
-  margin-bottom: 0.4em;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  color: #406882;
 }
 .commitment-card__progress ul {
-  margin: 0.3em 0 0 1em;
+  margin: 0.3em 0 0 1.2em;
   padding: 0;
 }
 .commitment-card__progress li {
   list-style: disc;
+  color: #317efb;
+  font-size: 0.98em;
+}
+/* Decorative accent */
+.commitment-card::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #317efb33 0%, transparent 70%);
+  z-index: 0;
+}
+.commitment-card__header, .commitment-card__body {
+  position: relative;
+  z-index: 1;
 }

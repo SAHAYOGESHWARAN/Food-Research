@@ -9,5 +9,6 @@ router.get('/', authenticate, authorize('admin'), subscriptionController.getSubs
 router.get('/:id', authenticate, subscriptionController.getSubscriptionById);
 router.put('/:id', authenticate, authorize('admin', 'subscriber'), subscriptionController.updateSubscription);
 router.delete('/:id', authenticate, authorize('admin'), subscriptionController.deleteSubscription);
+router.get('/me', authenticate, subscriptionController.getMySubscriptions);
 
 module.exports = router;

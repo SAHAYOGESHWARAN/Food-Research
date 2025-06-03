@@ -13,6 +13,9 @@ const ingredientRoutes = require('./routes/ingredientRoutes');
 const commitmentRoutes = require('./routes/commitmentRoutes');
 const regulationRoutes = require('./routes/regulationRoutes');
 const subscriptionRoutes = require('./routes/subscriptionRoutes');
+const marketInsightRoutes = require('./routes/marketInsightRoutes');
+const studyRoutes = require('./routes/studyRoutes');
+const tutorialRoutes = require('./routes/tutorialRoutes');
 
 const app = express();
 
@@ -33,6 +36,9 @@ app.use('/api/ingredients', ingredientRoutes);
 app.use('/api/commitments', commitmentRoutes);
 app.use('/api/regulations', regulationRoutes);
 app.use('/api/subscriptions', subscriptionRoutes);
+app.use('/api/market-insights', marketInsightRoutes);
+app.use('/api/studies', studyRoutes);
+app.use('/api/tutorials', tutorialRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

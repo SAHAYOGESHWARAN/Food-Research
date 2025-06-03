@@ -85,13 +85,14 @@ label {
 }
 
 .auth-form, .dashboard-page, .profile-page, .not-found-page {
-  background: var(--background);
+  background: linear-gradient(120deg, #f8fafc 0%, #e3e9f6 100%);
   padding: 2.5em 2em;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-  max-width: 440px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(49,126,251,0.10), 0 1.5px 4px rgba(49,126,251,0.04);
+  max-width: 480px;
   margin: 2.5em auto;
   animation: fadeIn 0.5s;
+  border: 1.5px solid #e0e7ef;
 }
 
 @keyframes fadeIn {
@@ -132,13 +133,16 @@ label {
   flex-direction: column;
 }
 .auth-layout__header, .main-layout__header, .dashboard-layout__header {
+  font-size: 1.5em;
   padding: 1.5em 0 1em 0;
   text-align: center;
-  background: var(--primary-color);
+  background: linear-gradient(90deg, #317EFB 0%, #406882 100%);
   color: #fff;
-  font-size: 1.5em;
   letter-spacing: 0.02em;
   font-weight: 700;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 2px 12px rgba(49,126,251,0.08);
 }
 .auth-layout__footer, .main-layout__footer, .dashboard-layout__footer {
   text-align: center;
@@ -146,6 +150,9 @@ label {
   background: #f5f6fa;
   color: var(--text-light);
   font-size: 0.95em;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  box-shadow: 0 -2px 12px rgba(49,126,251,0.04);
 }
 
 /* Utility */
@@ -172,6 +179,7 @@ label {
   .auth-form, .dashboard-page, .profile-page, .not-found-page {
     padding: 1em;
     max-width: 98vw;
+    border-radius: 10px;
   }
   .auth-layout__header, .main-layout__header, .dashboard-layout__header {
     font-size: 1.1em;

@@ -2,10 +2,12 @@ import React, { createContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import apiEndpoints from '../api/apiEndpoints';
 import axios from '../api/axiosInstance';
+import useAuth from '../hooks/useAuth';
 
 const SubscriptionContext = createContext();
 
 export const SubscriptionProvider = ({ children }) => {
+  const { user } = useAuth();
   const [subscriptions, setSubscriptions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -14,7 +16,11 @@ export const SubscriptionProvider = ({ children }) => {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.get(apiEndpoints.subscriptions);
+      let url = apiEndpoints.subscriptions;
+      if (user && user.role !== 'admin') {
+        url = apiEndpoints.subscriptions + '/me';
+      }
+      const res = await axios.get(url);
       setSubscriptions(res.data);
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to fetch subscriptions');

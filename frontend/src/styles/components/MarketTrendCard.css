@@ -1,8 +1,7 @@
-.regulation-card {
+.market-trend-card {
   background: linear-gradient(120deg, #f8fafc 0%, #e3e9f6 100%);
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(49, 126, 251, 0.1),
-    0 1.5px 4px rgba(49, 126, 251, 0.04);
+  box-shadow: 0 4px 24px rgba(49,126,251,0.10), 0 1.5px 4px rgba(49,126,251,0.04);
   padding: 2em 1.5em;
   margin-bottom: 2em;
   max-width: 540px;
@@ -13,29 +12,33 @@
   position: relative;
   overflow: hidden;
 }
-.regulation-card:hover {
-  box-shadow: 0 8px 32px rgba(49, 126, 251, 0.18),
-    0 2px 8px rgba(49, 126, 251, 0.08);
+.market-trend-card:hover {
+  box-shadow: 0 8px 32px rgba(49,126,251,0.18), 0 2px 8px rgba(49,126,251,0.08);
   transform: translateY(-2px) scale(1.015);
 }
-.regulation-card h3 {
+.market-trend-card h3 {
+  margin: 0 0 0.7rem 0;
   color: #317efb;
-  margin-bottom: 0.7em;
-  font-size: 1.25em;
+  font-size: 1.35em;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
-.regulation-card > div {
-  margin-bottom: 0.6em;
-  font-size: 1.05em;
+.market-trend-card p {
   color: #406882;
+  font-size: 1.08em;
+  margin-bottom: 0.7em;
+  font-weight: 500;
 }
-.regulation-card strong {
+.market-trend-card strong {
   color: #406882;
   font-weight: 600;
 }
+.market-trend-card > div {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
 /* Decorative accent */
-.regulation-card::before {
+.market-trend-card::before {
   content: '';
   position: absolute;
   top: -40px;
@@ -45,8 +48,7 @@
   background: radial-gradient(circle, #317efb33 0%, transparent 70%);
   z-index: 0;
 }
-.regulation-card h3,
-.regulation-card > div {
+.market-trend-card h3, .market-trend-card p, .market-trend-card > div {
   position: relative;
   z-index: 1;
 }

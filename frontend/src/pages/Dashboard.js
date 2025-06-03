@@ -1,11 +1,12 @@
 import React, { useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import DashboardLayout from '../layouts/DashboardLayout';
 import useAuth from '../hooks/useAuth';
 import Chart from '../components/Chart';
 import Button from '../components/Button';
 import logo from '../assets/images/logo192.png';
 import '../styles/dashboard.css';
+import '../styles/global.css';
+import DashboardLayout from '../layouts/DashboardLayout';
 
 const sideNavLinks = [
   { label: 'Dashboard', href: '/dashboard', icon: '🏠' },
@@ -100,6 +101,9 @@ const Dashboard = () => {
             <Link to="/commitments"><Button>View Commitments</Button></Link>
             <Link to="/market-insights"><Button>Market Insights</Button></Link>
             <Link to="/regulations"><Button>Regulations</Button></Link>
+            <Link to="/studies"><Button>Studies</Button></Link>
+            <Link to="/tutorials"><Button>Tutorials</Button></Link>
+            <Link to="/ingredients"><Button>Ingredients</Button></Link>
           </div>
         </main>
       </div>

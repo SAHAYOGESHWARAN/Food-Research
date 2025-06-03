@@ -72,3 +72,13 @@ exports.deleteSubscription = async (req, res) => {
     res.status(500).json({ message: 'Server error', error });
   }
 };
+
+// Get subscriptions for the authenticated user
+exports.getMySubscriptions = async (req, res) => {
+  try {
+    const subscriptions = await Subscription.find({ userID: req.user.userId });
+    res.json(subscriptions);
+  } catch (error) {
+    res.status(500).json({ message: 'Server error', error });
+  }
+};

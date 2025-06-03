@@ -10,6 +10,9 @@ const apiEndpoints = {
   regulations: `${API_BASE_URL}/regulations`,
   subscriptions: `${API_BASE_URL}/subscriptions`,
   health: `${API_BASE_URL}/health`,
+  marketInsights: `${API_BASE_URL}/market-insights`,
+  studies: `${API_BASE_URL}/studies`,
+  tutorials: `${API_BASE_URL}/tutorials`,
 };
 
 export default apiEndpoints;

@@ -1,0 +1,95 @@
+.tutorials-page {
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(120deg, #f8fafc 0%, #e3e9f6 100%);
+  min-height: 100vh;
+}
+.tutorial-detail-page {
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(120deg, #e3e9f6 0%, #f8fafc 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(49,126,251,0.10), 0 1.5px 4px rgba(49,126,251,0.04);
+  max-width: 700px;
+  margin: 2rem auto;
+}
+.add-tutorial-page {
+  padding: 2.5rem 1.5rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(49,126,251,0.10), 0 1.5px 4px rgba(49,126,251,0.04);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+.tutorials-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-content: flex-start;
+}
+.tutorials-list-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(49,126,251,0.08);
+  padding: 1.2em 1.1em;
+  min-width: 220px;
+  max-width: 320px;
+  flex: 1 1 220px;
+  transition: box-shadow 0.2s, transform 0.15s;
+  border: 1.5px solid #e0e7ef;
+  position: relative;
+  overflow: hidden;
+}
+.tutorials-list-item:hover {
+  box-shadow: 0 8px 32px rgba(49,126,251,0.18), 0 2px 8px rgba(49,126,251,0.08);
+  transform: translateY(-2px) scale(1.015);
+}
+.tutorials-list-item a {
+  color: #317efb;
+  font-weight: 600;
+  font-size: 1.08em;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+.tutorials-list-item a:hover {
+  text-decoration: underline;
+}
+/* Form styles for add/edit */
+.tutorial-form label {
+  display: block;
+  margin-bottom: 1.1em;
+  color: #406882;
+  font-weight: 500;
+}
+.tutorial-form input,
+.tutorial-form textarea {
+  width: 100%;
+  padding: 0.7em 1em;
+  border-radius: 7px;
+  border: 1.5px solid #e0e7ef;
+  margin-top: 0.3em;
+  font-size: 1em;
+  background: #f8fafc;
+  transition: border 0.2s;
+}
+.tutorial-form input:focus,
+.tutorial-form textarea:focus {
+  border: 1.5px solid #317efb;
+  outline: none;
+}
+.tutorial-form button {
+  background: linear-gradient(90deg, #406882 0%, #317efb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8em 2em;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.tutorial-form button:hover {
+  background: linear-gradient(90deg, #317efb 0%, #406882 100%);
+  box-shadow: 0 4px 16px rgba(49,126,251,0.15);
+  transform: translateY(-2px) scale(1.03);
+}
