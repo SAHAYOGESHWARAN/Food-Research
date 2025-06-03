@@ -4,6 +4,7 @@ import apiEndpoints from '../../api/apiEndpoints';
 import axios from '../../api/axiosInstance';
 import Loader from '../../components/Loader';
 import '../../styles/components/RegulationCard.css';
+import '../../styles/components/AddRegulationPage.css';
 
 const AddRegulationPage = () => {
   const navigate = useNavigate();

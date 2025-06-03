@@ -5,6 +5,7 @@ import Button from '../components/Button';
 import Loader from '../components/Loader';
 import useAuth from '../hooks/useAuth';
 import authService from '../api/authService';
+import '../styles/components/LoginPage.css';
 
 const Login = () => {
   const navigate = useNavigate();

@@ -61,6 +61,12 @@ const App = () => (
             <Route path="/products/add" element={<AddProductPage />} />
             <Route path="/commitments/add" element={<AddCommitmentPage />} />
             <Route path="/regulations/add" element={<AddRegulationPage />} />
+            {/* Add routes for role-based add pages */}
+            <Route path="/add-market-insight" element={<AddMarketInsightPage />} />
+            <Route path="/add-product" element={<AddProductPage />} />
+            <Route path="/add-regulation" element={<AddRegulationPage />} />
+            <Route path="/add-study" element={<AddStudyPage />} />
+            <Route path="/add-tutorial" element={<AddTutorialPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>

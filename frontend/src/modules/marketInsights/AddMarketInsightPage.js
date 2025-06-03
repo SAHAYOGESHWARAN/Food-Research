@@ -4,6 +4,7 @@ import apiEndpoints from '../../api/apiEndpoints';
 import axios from '../../api/axiosInstance';
 import Loader from '../../components/Loader';
 import '../../styles/components/MarketTrendCard.css';
+import '../../styles/components/AddMarketInsightPage.css';
 
 const AddMarketInsightPage = () => {
   const navigate = useNavigate();

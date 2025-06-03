@@ -162,8 +162,6 @@ const Dashboard = () => {
                 <Link to="/add-market-insight"><Button>Add Market Insight</Button></Link>
                 <Link to="/add-product"><Button>Add Product</Button></Link>
                 <Link to="/add-regulation"><Button>Add Regulation</Button></Link>
-                <Link to="/add-study"><Button>Add Study</Button></Link>
-                <Link to="/add-tutorial"><Button>Add Tutorial</Button></Link>
               </>
             )}
           </div>

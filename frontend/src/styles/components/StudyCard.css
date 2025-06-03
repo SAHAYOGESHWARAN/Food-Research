@@ -1,4 +1,5 @@
-.market-trend-card {
+/* Premium Ocean Study Card Styles */
+.study-card {
   background: linear-gradient(120deg, #e0f7fa 0%, #b2ebf2 100%);
   border-radius: 18px;
   box-shadow: 0 4px 24px #00bcd422;
@@ -10,11 +11,11 @@
   overflow: hidden;
   animation: fadeIn 0.9s;
 }
-.market-trend-card:hover {
+.study-card:hover {
   box-shadow: 0 8px 40px #00bcd433;
   transform: translateY(-2px) scale(1.02);
 }
-.market-trend-card h3 {
+.study-card h3 {
   color: #00bcd4;
   font-size: 1.35rem;
   font-weight: 800;
@@ -22,27 +23,27 @@
   letter-spacing: 0.5px;
   text-shadow: 0 2px 8px #00bcd433;
 }
-.market-trend-card p {
+.study-card p {
   color: #01579b;
   font-size: 1.08em;
   margin-bottom: 12px;
   font-weight: 500;
 }
-.market-trend-card div {
+.study-card div {
   color: #01579b;
   font-size: 0.99em;
   margin-bottom: 5px;
 }
-.market-trend-card strong {
+.study-card strong {
   color: #00bcd4;
   font-weight: 700;
 }
 @media (max-width: 600px) {
-  .market-trend-card {
+  .study-card {
     padding: 14px 7px 10px 7px;
     border-radius: 10px;
   }
-  .market-trend-card h3 {
+  .study-card h3 {
     font-size: 1.08rem;
   }
 }

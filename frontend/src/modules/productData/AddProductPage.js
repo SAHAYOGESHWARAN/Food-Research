@@ -4,6 +4,7 @@ import apiEndpoints from '../../api/apiEndpoints';
 import axios from '../../api/axiosInstance';
 import Loader from '../../components/Loader';
 import '../../styles/components/ProductListPage.css';
+import '../../styles/components/AddProductPage.css';
 
 const AddProductPage = () => {
   const navigate = useNavigate();

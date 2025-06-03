@@ -78,6 +78,7 @@ const Register = () => {
         >
           <option value="admin">Admin</option>
           <option value="contributor">Contributor</option>
+          <option value="user">Subscriber</option>
         </select>
         
         <Button type="submit" disabled={loading}>
