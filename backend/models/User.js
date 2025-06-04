@@ -33,6 +33,15 @@ const UserSchema = new mongoose.Schema({
     type: Boolean,
     default: true,
   },
+  mobile: {
+    type: String,
+    trim: true,
+    default: '',
+  },
+  profilePicture: {
+    type: String,
+    default: '',
+  },
 }, { timestamps: true });
 
 module.exports = mongoose.model('User', UserSchema);

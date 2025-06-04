@@ -12,6 +12,10 @@ import { FaUsers, FaChartLine, FaBoxOpen, FaRegCheckCircle, FaRegNewspaper, FaRe
 import '../styles/dashboard.css';
 import '../styles/global.css';
 import Modal from '../components/Modal';
+import Settings from '../pages/Settings';
+import Profile from '../pages/Profile';
+import Support from '../pages/Support';
+import Subscriptions from '../pages/Subscriptions';
 
 const sideNavLinks = [
   { label: 'Dashboard', href: '/dashboard', icon: '🏠' },
@@ -114,13 +118,31 @@ const Dashboard = () => {
       setEditProfile(prev => ({ ...prev, profilePicture: URL.createObjectURL(e.target.files[0]) }));
     }
   };
-  const handleProfileEditSubmit = (e) => {
+  const handleProfileEditSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Implement API call to update user profile (e.g., /api/user/update)
-    // Example endpoint: /api/user/update-profile
-    // Send: { name, email, mobile, profilePicture }
-    setEditProfileOpen(false);
-    // Optionally, update user context/state
+    try {
+      const formData = new FormData();
+      formData.append('name', editProfile.name);
+      formData.append('email', editProfile.email);
+      formData.append('mobile', editProfile.mobile);
+      if (profilePicFile) {
+        formData.append('profilePicture', profilePicFile);
+      }
+      // Assumes user._id is available from context
+      const response = await fetch(`/api/users/${user._id}`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        },
+        body: formData
+      });
+      if (!response.ok) throw new Error('Profile update failed');
+      // Optionally update user context/state here
+      setEditProfileOpen(false);
+      // Optionally show a success message
+    } catch (err) {
+      alert('Failed to update profile.');
+    }
   };
 
   return (

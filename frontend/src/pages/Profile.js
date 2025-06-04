@@ -24,6 +24,7 @@ const Profile = () => {
         <div><strong>Email:</strong> {user.email}</div>
         <div><strong>Role:</strong> {user.role}</div>
         <div><strong>Status:</strong> {user.isActive ? 'Active' : 'Inactive'}</div>
+        <div><strong>Mobile:</strong> {user.mobile || 'N/A'}</div>
         {/* Add more profile details or edit functionality as needed */}
       </div>
     </MainLayout>
