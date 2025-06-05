@@ -1,69 +1,105 @@
-Food Research
-A web-based application designed to facilitate food-related research and data analysis.
+# Food Research
 
-Overview
-This project aims to provide a platform for researchers and enthusiasts to explore and analyze food-related data.
+**Food Research** is a full-stack web application designed to facilitate food-related research and data analysis. This platform allows users to explore, create, and manage food ingredients, recipes, and research insights efficiently.
 
-Features
-User-friendly interface for data exploration
+## 🌐 Live Demo
 
-Integration with relevant food data APIs
+👉 [Click here to view the live application](https://food-research-ten.vercel.app)
 
-Visualization tools for data analysis
+---
 
-Responsive design for various devices
+## 📖 Overview
 
-Technologies Used
-Frontend: HTML, CSS, JavaScript
+The primary goal of this project is to provide a system for researchers, students, or food enthusiasts to:
+- Register and log in to the system
+- Create and manage ingredients
+- Add and manage food recipes
+- Analyze food data for research or diet planning purposes
 
-Backend: Node.js, Express
+---
 
-Database: MongoDB
+## ✨ Features
 
-Getting Started
-Prerequisites
-Node.js and npm installed
+- ✅ User Registration & Login
+- ✅ Create, Read, Update, Delete (CRUD) functionality for ingredients
+- ✅ Add food recipes with dynamic input
+- ✅ Responsive and user-friendly design
+- ✅ REST API integration
+- ✅ MongoDB database for storing data
+- ✅ Secure backend authentication
+- ✅ Deployment-ready structure
 
-MongoDB installed and running
+---
 
-Installation
-Clone the repository:
+## 🛠️ Tech Stack
 
-bash
-Copy code
+**Frontend**
+- HTML5, CSS3
+- JavaScript (ES6)
+- React.js
+
+**Backend**
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- JWT Authentication
+
+**Deployment**
+- Frontend: Vercel
+- Backend: Render / Railway (configurable)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14+)
+- npm
+- MongoDB (local or cloud like MongoDB Atlas)
+
+### Installation
+
+```bash
+# 1. Clone the repository
 git clone https://github.com/SAHAYOGESHWARAN/Food-Research.git
 
-2. Navigate to the project directory:
-
-bash
-Copy code
+# 2. Navigate to the project directory
 cd Food-Research
-github.com
-+1
-github.com
-+1
 
-3. Install dependencies:
-
-bash
-Copy code
+# 3. Install backend dependencies
 npm install
-github.com
 
-4. Start the application:
+# (Optional) If frontend is separate
+# cd client
+# npm install
 
-bash
-Copy code
+# 4. Set up environment variables
+# Create a `.env` file in the root directory with the following:
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+PORT=5000
+
+# 5. Start the server
 npm start
-github.com
 
-Usage
-Access the application at http://localhost:3000 and explore the features available for food data research.
+| Method | Endpoint             | Description                 |
+| ------ | -------------------- | --------------------------- |
+| POST   | /api/register        | Register a new user         |
+| POST   | /api/login           | Login with user credentials |
+| POST   | /api/ingredient      | Add new ingredient          |
+| GET    | /api/ingredients     | Get all ingredients         |
+| PUT    | /api/ingredient/\:id | Update an ingredient        |
+| DELETE | /api/ingredient/\:id | Delete an ingredient        |
+🤝 Contributing
+Contributions are welcome!
+Feel free to fork the repository, make changes, and submit a pull request. Please ensure your changes are well-tested and documented.
 
-Contributing
-Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
-
-License
+📄 License
 This project is licensed under the MIT License.
+See the LICENSE file for details.
 
-For more details, visit the live application: Food Research
+👨‍💻 Author
+Saha Yogeshwaran
+🔗 LinkedIn
+📂 GitHub Profile
