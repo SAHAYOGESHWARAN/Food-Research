@@ -80,10 +80,6 @@ exports.updateUser = async (req, res) => {
   }
   try {
     const updateData = { ...req.body };
-    // Handle file upload for profilePicture if using multer or similar
-    if (req.file) {
-      updateData.profilePicture = `/uploads/${req.file.filename}`;
-    }
     if (updateData.password) {
       updateData.password = await bcrypt.hash(updateData.password, 10);
     }
