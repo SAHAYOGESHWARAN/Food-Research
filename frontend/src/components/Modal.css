@@ -20,6 +20,9 @@
   padding: 2rem 1.5rem;
   position: relative;
   animation: modalFadeIn 0.3s;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px; /* adjust as needed */
 }
 
 @keyframes modalFadeIn {
@@ -50,6 +53,7 @@
 }
 
 .modal-body {
+  flex: 1 1 auto;
   margin-bottom: 1.5rem;
 }
 
@@ -57,4 +61,5 @@
   display: flex;
   justify-content: flex-end;
   gap: 0.5rem;
+  margin-top: auto;
 }
