@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/dashboard.css';
-
+import '../styles/support.css';
 const faqs = [
   {
     question: 'How do I reset my password?',

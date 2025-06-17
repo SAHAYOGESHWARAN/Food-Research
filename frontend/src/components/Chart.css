@@ -1,0 +1,17 @@
+/* Chart.css - Style template for Chart component */
+.chart-container {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(49,126,251,0.10);
+  padding: 24px;
+  margin: 16px 0;
+}
+
+.chart-title {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+/* Add more chart-specific styles as needed */
