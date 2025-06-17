@@ -16,7 +16,13 @@ const sideNavLinks = [
   { label: 'Commitments', href: '/commitments', icon: '✅' },
   { label: 'Market Insights', href: '/market-insights', icon: '📈' },
   { label: 'Regulations', href: '/regulations', icon: '📜' },
+  { label: 'Studies', href: '/studies', icon: '📊' },
+  { label: 'Tutorials', href: '/tutorials', icon: '💡' },
+  { label: 'Ingredients', href: '/ingredients', icon: '🥦' },
   { label: 'Profile', href: '/profile', icon: '👤' },
+  { label: 'Settings', href: '/settings', icon: '⚙️' },
+  { label: 'Subscriptions', href: '/subscriptions', icon: '💳' },
+  { label: 'Support', href: '/support', icon: '🆘' },
   { label: 'Login', href: '/login', icon: '🔑' },
   { label: 'Register', href: '/register', icon: '📝' },
 ];
@@ -157,9 +163,13 @@ const Dashboard = () => {
             {/* Role-based Add Pages */}
             {(user?.role === 'admin' || user?.role === 'contributor') && (
               <>
-                <Link to="/add-market-insight"><Button>Add Market Insight</Button></Link>
-                <Link to="/add-product"><Button>Add Product</Button></Link>
-                <Link to="/add-regulation"><Button>Add Regulation</Button></Link>
+                <Link to="/products/add"><Button>Add Product</Button></Link>
+                <Link to="/commitments/add"><Button>Add Commitment</Button></Link>
+                <Link to="/market-insights/add"><Button>Add Market Insight</Button></Link>
+                <Link to="/regulations/add"><Button>Add Regulation</Button></Link>
+                <Link to="/studies/add"><Button>Add Study</Button></Link>
+                <Link to="/tutorials/add"><Button>Add Tutorial</Button></Link>
+                <Link to="/ingredients/add"><Button>Add Ingredient</Button></Link>
               </>
             )}
           </div>

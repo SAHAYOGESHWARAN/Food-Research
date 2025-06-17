@@ -10,6 +10,9 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
+import Settings from './pages/Settings';
+import Subscriptions from './pages/Subscriptions';
+import Support from './pages/Support';
 
 import ProductListPage from './modules/productData/ProductListPage';
 import ProductDetailPage from './modules/productData/ProductDetailPage';
@@ -61,6 +64,9 @@ const App = () => (
             <Route path="/products/add" element={<AddProductPage />} />
             <Route path="/commitments/add" element={<AddCommitmentPage />} />
             <Route path="/regulations/add" element={<AddRegulationPage />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/subscriptions" element={<Subscriptions />} />
+            <Route path="/support" element={<Support />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
