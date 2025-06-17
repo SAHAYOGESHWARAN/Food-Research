@@ -1,0 +1,122 @@
+
+
+.subscriptions-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.subscriptions-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #2d3748;
+  text-align: center;
+}
+
+.plans-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.plan-card {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px 32px;
+  min-width: 220px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.plan-card.selected {
+  border: 2px solid #3182ce;
+  background: #ebf8ff;
+  box-shadow: 0 2px 12px rgba(49,130,206,0.08);
+}
+
+.plan-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2b6cb0;
+}
+
+.plan-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #38a169;
+  margin-bottom: 12px;
+}
+
+.plan-description {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 16px;
+}
+
+.subscribe-btn, .cancel-btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.subscribe-btn {
+  background: #3182ce;
+  color: #fff;
+}
+
+.subscribe-btn:hover {
+  background: #2b6cb0;
+}
+
+.cancel-btn {
+  background: #e53e3e;
+  color: #fff;
+  margin-top: 12px;
+}
+
+.cancel-btn:hover {
+  background: #c53030;
+}
+
+.current-plan-label {
+  display: inline-block;
+  background: #38a169;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 2px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.subscriptions-message {
+  text-align: center;
+  margin-top: 20px;
+  color: #2b6cb0;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .subscriptions-container {
+    padding: 12px;
+  }
+  .plans-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .plan-card {
+    min-width: unset;
+    padding: 16px;
+  }
+}

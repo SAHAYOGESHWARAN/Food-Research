@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { SubscriptionContext } from '../context/SubscriptionContext';
-import { AuthContext } from '../context/AuthContext';
-import '../styles/dashboard.css';
+import SubscriptionContext from '../context/SubscriptionContext';
+import AuthContext from '../context/AuthContext';
+import '../styles/subscriptions.css';
 
 const Subscriptions = () => {
   const { user } = useContext(AuthContext);
@@ -39,8 +39,8 @@ const Subscriptions = () => {
   };
 
   return (
-    <div className="subscriptions-page">
-      <h2>My Subscriptions</h2>
+    <div className="subscriptions-container">
+      <h2 className="subscriptions-title">My Subscriptions</h2>
       {message && <div className="subscriptions-message">{message}</div>}
       {loading ? (
         <div>Loading...</div>
@@ -63,12 +63,15 @@ const Subscriptions = () => {
             <h3>Available Plans</h3>
             <div className="plans-list">
               {plans.map(plan => (
-                <div key={plan.id} className={`plan-card${current && current.planId === plan.id ? ' active' : ''}`}>
-                  <h4>{plan.name}</h4>
-                  <p>{plan.description}</p>
-                  <p><strong>Price:</strong> ${plan.price} / {plan.interval}</p>
+                <div
+                  key={plan.id}
+                  className={`plan-card${current && current.planId === plan.id ? ' selected' : ''}`}
+                >
+                  <h4 className="plan-title">{plan.name}</h4>
+                  <p className="plan-description">{plan.description}</p>
+                  <p className="plan-price"><strong>Price:</strong> ${plan.price} / {plan.interval}</p>
                   {current && current.planId === plan.id ? (
-                    <span className="current-label">Current Plan</span>
+                    <span className="current-plan-label">Current Plan</span>
                   ) : (
                     <button onClick={() => handleSubscribe(plan.id)} className="subscribe-btn">Choose Plan</button>
                   )}

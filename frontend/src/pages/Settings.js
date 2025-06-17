@@ -1,8 +1,7 @@
 import React, { useContext, useState } from 'react';
-import { AuthContext } from '../context/AuthContext';
-import { ThemeContext } from '../context/ThemeContext';
-import '../styles/global.css';
-import '../styles/dashboard.css';
+import AuthContext from '../context/AuthContext';
+import ThemeContext from '../context/ThemeContext';
+import '../styles/settings.css';
 
 const Settings = () => {
   const { user, updateUser, changePassword } = useContext(AuthContext);
@@ -44,39 +43,39 @@ const Settings = () => {
   };
 
   return (
-    <div className="settings-page">
-      <h2>Settings</h2>
+    <div className="settings-container">
+      <h2 className="settings-title">Settings</h2>
       {message && <div className="settings-message">{message}</div>}
       <section className="settings-section">
         <h3>Profile</h3>
         <form onSubmit={handleProfileSubmit} className="settings-form">
-          <label>
+          <label className="settings-label">
             Name
-            <input type="text" name="name" value={form.name} onChange={handleProfileChange} required />
+            <input type="text" name="name" value={form.name} onChange={handleProfileChange} required className="settings-input" />
           </label>
-          <label>
+          <label className="settings-label">
             Email
-            <input type="email" name="email" value={form.email} onChange={handleProfileChange} required />
+            <input type="email" name="email" value={form.email} onChange={handleProfileChange} required className="settings-input" />
           </label>
-          <button type="submit">Update Profile</button>
+          <button type="submit" className="settings-btn">Update Profile</button>
         </form>
       </section>
       <section className="settings-section">
         <h3>Change Password</h3>
         <form onSubmit={handlePasswordSubmit} className="settings-form">
-          <label>
+          <label className="settings-label">
             Current Password
-            <input type="password" name="current" value={passwords.current} onChange={handlePasswordChange} required />
+            <input type="password" name="current" value={passwords.current} onChange={handlePasswordChange} required className="settings-input" />
           </label>
-          <label>
+          <label className="settings-label">
             New Password
-            <input type="password" name="new" value={passwords.new} onChange={handlePasswordChange} required />
+            <input type="password" name="new" value={passwords.new} onChange={handlePasswordChange} required className="settings-input" />
           </label>
-          <label>
+          <label className="settings-label">
             Confirm New Password
-            <input type="password" name="confirm" value={passwords.confirm} onChange={handlePasswordChange} required />
+            <input type="password" name="confirm" value={passwords.confirm} onChange={handlePasswordChange} required className="settings-input" />
           </label>
-          <button type="submit">Change Password</button>
+          <button type="submit" className="settings-btn">Change Password</button>
         </form>
       </section>
       <section className="settings-section">
